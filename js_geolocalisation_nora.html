@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GEOLOCALISATION</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Sarpanch&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.mapbox.com/styles/v1/--noora--/ck9vd3bbq0o051inuq1r86036.html?fresh=true&title=view&access_token=pk.eyJ1IjoiLS1ub29yYS0tIiwiYSI6ImNrOXZjenJsMjAyZ2YzZXF2cXdlOWdyb2YifQ.0lB7Dif9aebdvihCFHU1Vg"
+    />
+    <!-- DEFER permet load DOM au début et puis le code JS est executé. (on peut mettre les balises <script> à la fin du body aussi sans defer)-->
+    <!--<script src="js_geolocalisation_nora.js" defer></script> -->
+
+    <!--   <script src="utilities.js" async ></script> c'est le script js_geolocal... .js typr MODULE qui va exporter ce fichier -->
+    <script src="js_geolocalisation_nora.js" type="module" defer></script>
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-div">
+        <h1>LOCALISATION</h1>
+      </div>
+      <nav>
+        <button id="geo-button" class="btn">
+          <i class="fas fa-crosshairs"></i>&nbsp WHERE AM I?
+        </button>
+    </nav>
+    </header>
+    <main>
+      <div class="container outerbox">
+        <div class="container innerbox">
+          <section class="localisation-div">
+         
+            <p id="para1a"></p>
+            <p id="lat"></p>
+            <p id="para2a"></p>
+            <p id="long"></p>
+          </section>
+          <section id="map"></section>
+
+          <section id="meteo" class="hidden">
+            <h2>Météo du jour</h2>
+            <p id="tmin">Température MIN : <span></span>°C</p>
+            <p id="tmax">Température MAX : <span></span>°C</p>
+            <p id="weather"></p>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script>
+      // button.addEventListener('click', onClickGeoButton);
+    </script>
+  </body>
+</html>
